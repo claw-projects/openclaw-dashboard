@@ -2,7 +2,7 @@
   "name": "openclaw-dashboard-backend",
   "version": "1.0.0",
   "description": "Backend API for OpenClaw Dashboard",
-  "main": "src/server.ts",
+  "main": "dist/server.js",
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/server.ts",
@@ -36,7 +36,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/openclaw/dashboard.git"
+    "url": "https://github.com/claw-projects/openclaw-dashboard.git"
   },
   "author": "OpenClaw Team",
   "license": "MIT"
