@@ -1,9 +1,9 @@
 import React from 'react'
-import { useStore } from '@store/useAgentStore'
+import { useAgentStore } from '@store/useAgentStore'
 
 export function AgentMonitor() {
-  const agentStatus = useStore((state) => state.agentStatus)
-  const currentTask = useStore((state) => state.currentTask)
+  const agentStatus = useAgentStore((state) => state.agentStatus)
+  const currentTask = useAgentStore((state) => state.currentTask)
 
   const getStatusColor = (status: string) => {
     switch (status) {

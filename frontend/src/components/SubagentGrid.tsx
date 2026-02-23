@@ -1,8 +1,8 @@
 import React from 'react'
-import { useStore } from '@store/useSubagentStore'
+import { useSubagentStore } from '@store/useSubagentStore'
 
 export function SubagentGrid() {
-  const subagents = useStore((state) => state.subagents)
+  const subagents = useSubagentStore((state) => state.subagents)
 
   const getStatusColor = (status: string) => {
     switch (status) {

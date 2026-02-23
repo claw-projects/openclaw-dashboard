@@ -1,8 +1,8 @@
 import React from 'react'
-import { useStore } from '@store/useProjectStore'
+import { useProjectStore } from '@store/useProjectStore'
 
 export function ProjectBoard() {
-  const projects = useStore((state) => state.projects)
+  const projects = useProjectStore((state) => state.projects)
 
   const getPriorityColor = (priority: string) => {
     switch (priority) {

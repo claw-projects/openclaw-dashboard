@@ -2,7 +2,8 @@ import { create } from 'zustand'
 import { useAgentStore } from './useAgentStore'
 
 interface ControlState {
-  // Control actions
+  agentStatus: 'online' | 'idle' | 'error'
+  realtimeEnabled: boolean
 }
 
 interface ControlActions {
@@ -13,6 +14,8 @@ interface ControlActions {
 }
 
 export const useControlStore = create<ControlState & ControlActions>((set, get) => ({
+  agentStatus: 'idle',
+  realtimeEnabled: true,
   // Actions delegate to agent store
   startAgent: () => {
     const setAgentStatus = useAgentStore.getState().setAgentStatus

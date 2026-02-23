@@ -1,8 +1,8 @@
 import React from 'react'
-import { useStore } from '@store/useActivityStore'
+import { useActivityStore } from '@store/useActivityStore'
 
 export function ActivityFeed() {
-  const activities = useStore((state) => state.activities)
+  const activities = useActivityStore((state) => state.activities)
 
   const getActivityTypeColor = (type: string) => {
     switch (type) {

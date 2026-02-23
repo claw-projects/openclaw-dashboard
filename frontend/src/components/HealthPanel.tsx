@@ -1,5 +1,5 @@
 import React from 'react'
-import { useStore } from '@store/useHealthStore'
+import { useHealthStore } from '@store/useHealthStore'
 import {
   LineChart,
   Line,
@@ -12,8 +12,8 @@ import {
 } from 'recharts'
 
 export function HealthPanel() {
-  const metrics = useStore((state) => state.metrics)
-  const metricsHistory = useStore((state) => state.metricsHistory)
+  const metrics = useHealthStore((state) => state.metrics)
+  const metricsHistory = useHealthStore((state) => state.metricsHistory)
 
   return (
     <div className="bg-white rounded-lg shadow-sm p-6">

@@ -1,11 +1,11 @@
 import React from 'react'
-import { useStore } from '@store/useControlStore'
+import { useControlStore } from '@store/useControlStore'
 
 export function ControlPanel() {
-  const agentStatus = useStore((state) => state.agentStatus)
-  const startAgent = useStore((state) => state.startAgent)
-  const stopAgent = useStore((state) => state.stopAgent)
-  const restartAgent = useStore((state) => state.restartAgent)
+  const agentStatus = useControlStore((state) => state.agentStatus)
+  const startAgent = useControlStore((state) => state.startAgent)
+  const stopAgent = useControlStore((state) => state.stopAgent)
+  const restartAgent = useControlStore((state) => state.restartAgent)
 
   return (
     <div className="bg-white rounded-lg shadow-sm p-6">
